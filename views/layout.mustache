@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Bags</title>
+  </head>
+  <body>
+    <form class="" action="/postData" method="post">
+      <label>Size of the Bag</label>
+      <input type="text" name="size" value="">
+      <br>
+      <br>
+      <label>Color of The Bag</label>
+      <input type="text" name="colors" value="">
+      <br>
+      <br>
+      <label>Does is have a Handle</label>
+      <select class="" name="hasHandle">
+        <option value="">Pick One...</option>
+        <option value="true">Yes</option>
+        <option value="false">No</option>
+      </select>
+      <br>
+      <br>
+      <label>How long have you had the bag?</label>
+      <input type="text" name="timeOwned" value="">
+      <br>
+      <br>
+      <label>Does it have Glitter on it?
+        <input type="text" name="glitter" value="">
+        <br>
+        If so then how much?</label>
+      <input type="text" name="glitterHowMuch" value="">
+      <br>
+      <br>
+      <label>Is the bag worn ?</label>
+      <br>
+      <input type="text" name="where" value="" placeholder="Where is it worn ?">
+      <br>
+      <input type="text" name="howBad" value="" placeholder="How bad is it worn?">
+      <br>
+      <p>Is it torn ?</p>
+      <select class="" name="torn2">
+        <option value="">Select One...</option>
+        <option value="true">Ture</option>
+        <option value="false">False</option>
+      </select>
+      <br>
+      <br>
+      <button type="submit" name="button">Submit to DataBase</button>
+
+    </form>
+    {{#bags}}
+
+      {{#size}}
+        <p>{{.}}</p>
+      {{/size}}
+      {{#colors}}
+        <p>{{.}}</p>
+      {{/colors}}
+
+    {{/bags}}
+
+  </body>
+</html>
